@@ -11,6 +11,11 @@ class CollecteursController extends AbstractController
     #[Route('/collecteurs', name: 'app_collecteurs')]
     public function index(): Response
     {
+        $entityManager = $doctirne -> getManager();
+        $collecteur = new Collecteur();
+
+
+
         return $this->render('collecteurs/index.html.twig', [
             'controller_name' => 'CollecteursController',
         ]);
